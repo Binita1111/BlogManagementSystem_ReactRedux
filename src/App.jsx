@@ -10,6 +10,7 @@ import Protected from "./components/higherOrderComponent/Protected";
 import { Suspense, lazy } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import Spinner from "./pages/blog/components/spinner/Spinner";
+import Parent from "./pages/useCallback/Parent";
 
 const Login = lazy(() => import("./pages/auth/Login"));
 const Register = lazy(() => import("./pages/auth/Register"));
@@ -50,6 +51,7 @@ function App() {
                   </Protected>
                 }
               />
+              <Route path="/usecallback" element={<Parent/>}/>
             </Routes>
           </Suspense>
         </ErrorBoundary>
