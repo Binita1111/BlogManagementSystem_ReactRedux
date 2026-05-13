@@ -11,6 +11,7 @@ import { Suspense, lazy } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import Spinner from "./pages/blog/components/spinner/Spinner";
 import Parent from "./pages/useCallback/Parent";
+import Hook from "./pages/hookPage/Hook";
 
 const Login = lazy(() => import("./pages/auth/Login"));
 const Register = lazy(() => import("./pages/auth/Register"));
@@ -52,6 +53,8 @@ function App() {
                 }
               />
               <Route path="/usecallback" element={<Parent/>}/>
+              <Route path="/hook" element={<Hook />}/>
+
             </Routes>
           </Suspense>
         </ErrorBoundary>
